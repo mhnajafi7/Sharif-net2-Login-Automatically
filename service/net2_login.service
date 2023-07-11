@@ -1,0 +1,11 @@
+[Unit]
+Description=Login to net2.sharif.edu
+After=network.target
+
+[Service]
+WorkingDirectory=/home/orangepi/
+ExecStart=/bin/bash /path/net2_login.sh 100
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
